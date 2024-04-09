@@ -1,0 +1,97 @@
+
+/* Signup.css */
+
+/* Overall container styles */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  /* Heading styles */
+  .multi-color-text {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  /* Form group styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label styles */
+  .form-label {
+    font-weight: bold;
+    color: #555555;
+  }
+  
+  /* Input field styles */
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Input field focus styles */
+  .form-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Small text styles */
+  .form-text {
+    color: #777777;
+    font-size: 14px;
+  }
+  
+  /* Submit button styles */
+  .form-submit {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Submit button hover styles */
+  .form-submit:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Have account link styles */
+  .have-account {
+    margin-top: 20px;
+  }
+  
+  .have-account a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .have-account a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 30px;
+    }
+  }
+  
+  
+  .multi-color-text {
+    background: linear-gradient(rgb(4, 109, 57), rgb(5, 126, 147),rgb(67, 67, 2),rgb(165, 76, 91),purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  

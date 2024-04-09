@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import "./Login.css"; // Import the CSS file
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -22,9 +23,9 @@ const Login = (props) => {
     if (json.success) {
       localStorage.setItem("token", json.authtoken);
       navigate("/");
-      props.showAlert("Logged In Successfully","success")
+      props.showAlert("Logged In Successfully", "success");
     } else {
-      props.showAlert("Invalid Details","danger")
+      props.showAlert("Invalid Details", "danger");
     }
   };
 
@@ -34,7 +35,7 @@ const Login = (props) => {
 
   return (
     <div className="my-3">
-      <h2>Login To Continue In NoteTaker</h2>
+      <h2 className="multi-color-text">Login To Continue In NoteTaker</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
@@ -70,6 +71,9 @@ const Login = (props) => {
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
+        <p>
+          Don't have an account? <Link to="/signup">Signup</Link>
+        </p>
       </form>
     </div>
   );

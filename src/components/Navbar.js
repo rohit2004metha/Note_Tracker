@@ -8,7 +8,7 @@ const Navbar = (props) => {
     const handalLogout  = () => {
         localStorage.removeItem('token')
         props.showAlert("Logout Successfully","success")
-        navigate('./login');
+        navigate('./Login');
     }
     let location = useLocation();
     return (
@@ -29,8 +29,8 @@ const Navbar = (props) => {
 
                     </ul>
                     {!localStorage.getItem('token')?<form className="d-flex"> 
-                    <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
-                    <Link className="btn btn-primary mx-1" to="/signup" role="button">Signup</Link>
+                    {/* <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link> */}
+                    {/* <Link className="btn btn-primary mx-1" to="/signup" role="button">Signup</Link> */}
                     </form>:<button onClick={handalLogout} className="btn btn-primary" >Logout</button> }
                 </div>
             </div>
