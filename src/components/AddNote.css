@@ -1,0 +1,169 @@
+/* Global styles */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.btn-btn-primary{
+    display: inline-block;
+    padding: 12px 18px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #8c7569;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-btn-primary:hover {
+    background-color: #55311c;
+  }
+
+.form-label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+}
+
+.custom-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 16px;
+    color: #555;
+    background-color: #f9f9f9;
+    outline: none;
+    /* Add 3D effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-input::placeholder {
+    color: #ccc;
+}
+
+.custom-input:hover {
+    border-color: #b3d7ff;
+    /* Enhance 3D effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* Add 3D effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .btn-primary {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 24px;
+    }
+    .custom-input {
+        font-size: 14px;
+    }
+}
+
+/* Error message styling */
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Success message styling */
+.success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Placeholder animation */
+.animated-input {
+    position: relative;
+}
+
+.animated-input input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.animated-input label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: #555;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.animated-input input:focus + label,
+.animated-input input:not(:placeholder-shown) + label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #007bff;
+}
+
+/* Flexbox alignment for form layout */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-row .custom-input {
+    flex: 1;
+    margin-right: 10px;
+}
