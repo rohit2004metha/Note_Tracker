@@ -37,81 +37,76 @@ const Signup = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-container">
-      <h1 className="multi-color-text">Sign Up To Use NoteTaker</h1>
-      <div className="form-group">
-        <label htmlFor="name" className="form-label">
-          Name
-        </label>
-        <input
-          type="text"
-          className="form-input"
-          id="name"
-          name="name"
-          value={credentials.name}
-          onChange={onChange}
-          aria-describedby="emailHelp"
-        />
+    <>
+      <div className="signup-container">
+        <div className="image-side">
+          <img src="/sign-up.jpg" alt="Signup Illustration" />
+        </div>
+        <form onSubmit={handleSubmit} className="form-container">
+          <h1 className="multi-color-text">Sign Up To Use NoteTaker</h1>
+          <div className="form-group">
+            <label htmlFor="name" className="form-label">Name</label>
+            <input
+              type="text"
+              className="form-input"
+              id="name"
+              name="name"
+              value={credentials.name}
+              onChange={onChange}
+              aria-describedby="emailHelp"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">Email address</label>
+            <input
+              type="email"
+              className="form-input"
+              id="email"
+              name="email"
+              value={credentials.email}
+              onChange={onChange}
+              aria-describedby="emailHelp"
+            />
+            <small id="emailHelp" className="form-text">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">Password</label>
+            <input
+              type="password"
+              className="form-input"
+              id="password"
+              name="password"
+              value={credentials.password}
+              onChange={onChange}
+              minLength={5}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="cpassword" className="form-label">Confirm Password</label>
+            <input
+              type="password"
+              className="form-input"
+              id="cpassword"
+              name="cpassword"
+              value={credentials.cpassword}
+              onChange={onChange}
+              minLength={5}
+              required
+            />
+          </div>
+
+          <button type="submit" className="form-submit">Submit</button>
+
+          <p className="have-account">Already have an account? <Link to="/login">Login</Link></p>
+        </form>
+
       </div>
-
-      <div className="form-group">
-        <label htmlFor="email" className="form-label">
-          Email address
-        </label>
-        <input
-          type="email"
-          className="form-input"
-          id="email"
-          name="email"
-          value={credentials.email}
-          onChange={onChange}
-          aria-describedby="emailHelp"
-        />
-        <small id="emailHelp" className="form-text">
-          We'll never share your email with anyone else.
-        </small>
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="password" className="form-label">
-          Password
-        </label>
-        <input
-          type="password"
-          className="form-input"
-          id="password"
-          name="password"
-          value={credentials.password}
-          onChange={onChange}
-          minLength={5}
-          required
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="cpassword" className="form-label">
-          Confirm Password
-        </label>
-        <input
-          type="password"
-          className="form-input"
-          id="cpassword"
-          name="cpassword"
-          value={credentials.cpassword}
-          onChange={onChange}
-          minLength={5}
-          required
-        />
-      </div>
-
-      <button type="submit" className="form-submit">
-        Submit
-      </button>
-
-      <p className="have-account">
-        Already have an account? <Link to="/login">Login</Link>
-      </p>
-    </form>
+  
+    </>
   );
 };
 

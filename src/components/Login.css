@@ -1,79 +1,105 @@
-/* Form container */
-.my-3 {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Form title */
-  .multi-color-text {
-    color: #007bff;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Form labels */
-  .form-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  /* Form inputs */
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s;
-  }
-  
-  .form-control:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
-  /* Submit button */
-  .btn-primary {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Signup link */
-  .p-signup {
-    margin-top: 15px;
-    text-align: center;
-  }
-  
-  .p-signup a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .p-signup a:hover {
-    text-decoration: underline;
-  }
-  
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
 
-  .multi-color-text {
-    background: linear-gradient(rgb(4, 109, 57), rgb(5, 126, 147),rgb(67, 67, 2),rgb(165, 76, 91),purple);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  height: calc(90vh - 60px);
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.multi-color-text {
+  color: #55311c;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.form-label {
+  font-size: 16px;
+  color: #8c7569;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #8c7569;
+}
+
+.btn-primary {
+  background-color: #8c7569;
+  color: #fff;
+  border: none;
+  padding: 16px 28px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #55311c;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-image {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 0 10px 10px 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    height: auto;
   }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-image {
+    border-radius: 10px 10px 0 0;
+  }
+}

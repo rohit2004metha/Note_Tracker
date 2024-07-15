@@ -81,7 +81,7 @@ const Notes = (props) => {
             <div className="modal-body">
               <form className="my-3">
                 <div className="mb-3">
-                  <label htmlFor="title" className="form-label">
+                  <label htmlFor="title" className="form-label" >
                     Title
                   </label>
                   <input
